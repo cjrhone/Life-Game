@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 1f;
+        moveSpeed = 2f;
         print("Hello There");
         
     }
@@ -23,5 +23,17 @@ public class Player : MonoBehaviour
         Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed, 
         0f);
         
+    }
+      void OnCollisionEnter(Collision coll) {
+        if(coll.gameObject.name == "Obstacle") {
+            print("Collide");
+            Destruction();
+            print("Destruction");
+        }
+    }
+
+    void Destruction() {
+        Destroy(this.gameObject);
+        print("BOOM!");
     }
 }
