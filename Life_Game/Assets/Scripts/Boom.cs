@@ -9,17 +9,19 @@ public class Boom : MonoBehaviour
     {
 
     }
-
-    // void OnCollisionEnter(Collision col) {
+    // used without trigger. Needs rigidbody. 
+    void OnCollisionEnter(Collision col) {
     
-    //     print("OnCollision collision");
-    // }
-
-     void OnTriggerEnter(Collider col) {
-    
-        print("OnTrigger collision");
+        print("OnCollision collision");
         Destroy(col.gameObject);
     }
+
+    // Triggers are like checkpoints and events 
+    //  void OnTriggerEnter(Collider col) {
+    
+    //     print("OnTrigger collision");
+    //     Destroy(col.gameObject);
+    // }
 
     // void Destruction() {
     //     Destroy(this.gameObject);
