@@ -24,16 +24,16 @@ public class Player : MonoBehaviour
         0f);
         
     }
-      void OnCollisionEnter(Collision coll) {
-        if(coll.gameObject.name == "Obstacle") {
-            print("Collide");
-            Destruction();
-            print("Destruction");
-        }
-    }
+    //   void OnCollisionEnter(Collision coll) {
+    //     if(coll.gameObject.name == "Obstacle") {
+    //         print("Collide");
+    //         Destruction();
+    //         print("Destruction");
+    //     }
+    // }
 
-    void Destruction() {
-        Destroy(this.gameObject);
-        print("BOOM!");
-    }
-}
+//     void Destruction() {
+//         Destroy(this.gameObject);
+//         print("BOOM!");
+//     }
+ }

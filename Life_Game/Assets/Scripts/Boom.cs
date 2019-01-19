@@ -7,12 +7,10 @@ public class Boom : MonoBehaviour
     //SerialzedField tells Unity to expose only in the Unity editor, but is still private
     [SerializeField]
     private GameObject RetryButton;
+    
+    [SerializeField]
+    private GameObject Player;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     // used without trigger. Needs rigidbody. 
     void OnCollisionEnter(Collision col) {
         //null check
@@ -20,10 +18,15 @@ public class Boom : MonoBehaviour
             RetryButton.SetActive(true);
         }
         print("OnCollision collision");
-        Destroy(col.gameObject);
+        if(Player)
+        {
+        print("Destroy Player");
+        Destroy(Player);
+        }
     }
 
-    // Triggers are checkpoints and events, physically they're usually empty objects 
+    // Triggers are checkpoints and events, physically they're usually empty objects
+    // Needs rigidbody 
     //  void OnTriggerEnter(Collider col) {
     
     //     print("OnTrigger collision");
