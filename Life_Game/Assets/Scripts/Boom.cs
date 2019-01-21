@@ -33,7 +33,7 @@ public class Boom : MonoBehaviour
 
         FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
-        Destroy(Player);
+        Destroy(col.gameObject);
         }
     }
 
