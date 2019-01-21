@@ -7,6 +7,7 @@ public class Destroyer : MonoBehaviour
 
         void OnTriggerEnter(Collider coll) 
         {
+            if (coll.gameObject.tag == "obstacle" || coll.gameObject.tag == "point" )
             print("OnTrigger Collision");
             Destroy(coll.gameObject);
         }
